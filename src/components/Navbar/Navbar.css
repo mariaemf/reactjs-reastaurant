@@ -1,0 +1,17 @@
+.app__navbar {
+  width: 100%;
+  /*usada para definir largura de um elemento -> ocupando 100% do elemetno pai*/
+  display: flex;
+  /*usada para deixar um container flexivel */
+  /*border: 2px solid black;
+  para definir o px das bordas e as cores*/
+  justify-content: space-between;
+  /*para alinhar um item ao inicio e outro no fim*/
+  align-items: center;
+  /*para alinhar o item ao centro do container*/
+  background: var(--color-black);
+  color: aliceblue;
+  padding: 1rem 2rem;
+  /*para definir espaçamento entre conteudo e sua borda -> definindo diferente valores de preenchimento para cada lado do elemento
+  1rem = para o topo e base e 2rem+> para preenchimento nas laterais = direita e esquerda*/
+}

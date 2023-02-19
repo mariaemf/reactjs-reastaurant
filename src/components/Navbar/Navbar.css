@@ -15,3 +15,37 @@
   /*para definir espaçamento entre conteudo e sua borda -> definindo diferente valores de preenchimento para cada lado do elemento
   1rem = para o topo e base e 2rem+> para preenchimento nas laterais = direita e esquerda*/
 }
+
+.app__navbar-logo {
+  display: flex;
+  justify-content: flex-start;
+  /*serve para alinhar itens em um container flex ao eixo principal (horizontal) é uma propriedade que pode ser usada para jusfity-content, usada para alinhar itens ao inicio do container flex = itens são posicionados no início do container flex, seguindo a direção do eixo principal. */
+  align-items: center;
+}
+
+.app__navbar-logo img {
+  width: 150px;
+}
+
+.app__navbar-links {
+  flex: 1;
+  /*um elemento filho dentro de um container flexível, você está dizendo que este elemento deve crescer para preencher todo o espaço disponível no container flexível que não foi ocupado pelos outros elementos. */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  list-style: none;
+  /*para tirar padrao*/
+
+}
+
+.app__navbar-links li {
+  margin: 0 1rem;
+  /*espaçamento em torno do elemento = definindo margin de 0px para topo e base do elemento, e uma margem de 1rem do lado esquerdo e direito = ous eja, tera espaço em branco de 1rem na esquerda e dirieta*/
+  cursor: pointer;
+}
+
+.app__navbar-links li:hover {
+  color: var(--color-grey);
+}

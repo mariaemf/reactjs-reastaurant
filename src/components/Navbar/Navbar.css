@@ -73,3 +73,46 @@
   height: 30px;
   background-color: var(--color-grey);
 }
+
+.app__navbar-smallscreen {
+  display: none;
+}
+
+.app__navbar-smallscren__overlay {
+  position: fixed;
+  /*position fixed serve para fixar um elemento na posicao desejada da pagina =ou seja, o elemnto permanecerá no mesmo lugar da tela, meso que o usuário role a pagina */
+  top: 0;
+  /*valor 0 para o topo */
+  left: 0;
+  /*significa que o elemento será colocado no canto superior do lado esquerdo da página*/
+  width: 100%;
+  /*largura do elemento, demonstrando que ele ocupara toda a tela*/
+  height: 100vh;
+  /*altura do elementoesta definida como vh (altura da janela do navegador) 1vh = 1% da altura do viewport, entao esse 100vh define a altura do elemento sendo igual a altura da janela do navegador =>  útil para criar elementos que ocupam a tela inteira, como fundos de página, seções de tela cheia, entre outros. */
+  background: var(--color-black);
+  flex-direction: column;
+  /*define a direção dos eixos principais usados pelo sistema do flexbox ===> Por exemplo, se tivermos um container flexível com quatro elementos filho, e definirmos flex-direction: column, esses elementos serão organizados em uma única coluna vertical, em que o primeiro elemento estará no topo e o último no final da coluna.*/
+  z-index: 5;
+  /*define a ordem de empilhamento do elemento em relação a outros elementos. Quanto maior o valor de z-index, maior é a prioridade de exibição do elemento em relação aos demais.*/
+}
+
+.app__navbar-smallscren__overlay .overlay__close {
+  font-size: 27px;
+  color: var(--color-golden);
+  cursor: pointer;
+
+  position: absolute;
+  /*posiciona o elemento em relacao ao elemento pai mais proximo que tnha uma posicao definida => quando definimos um elemento como absolute podemos usar as propriedades top, bottom, left, right para especificar a posicao do elemento pai*/
+  top: 20px;
+  right: 20px;
+}
+
+@media screen and (max-width: 1150px) {
+  .app__navbar-links {
+    display: none;
+  }
+
+  .app__navbar-smallscreen {
+    display: flex;
+  }
+}

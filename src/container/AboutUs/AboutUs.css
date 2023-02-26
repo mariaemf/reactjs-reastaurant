@@ -1,0 +1,97 @@
+.app__aboutus {
+  position: relative;
+  /*define como um elemento deve ser posicionado em relacao aos seus elementos irmaos, = position relative = ele é posicionado em relação à sua posição original no fluxo do documento, ou seja, como se não tivesse nenhuma modificação*/
+}
+
+.app__aboutus-overlay {
+  position: absolute;
+  /* centraliza horizontalmente e verticalmente */
+  left: 50%;
+  /*define a posicao do elemento em relacao a esquerda da tela*/
+  top: 50%;
+  /*define a posicao vertical do elemento em relacao ao topo da tela */
+  transform: translate(-50%, -50%);
+  /*usado para ajustar a posicao do elemento em relacao ao seu proprio tamanho */
+}
+
+.app__aboutus-overlay img {
+  width: 391px;
+  height: 415px;
+  z-index: 0;
+}
+
+.app__aboutus-content {
+  width: 100%;
+  /*! define a largura do elemento pai, significa q o elemento estendera por toda a largura disponivel do elemento pai.*/
+  z-index: 2;
+  /*! usado para definicao de ordem de empilhamento do elemento = usado para sobrepor o elemento de uma pagiana*/
+}
+
+.app__aboutus-content_aboutus {
+  flex: 1;
+  /*faz com que preencha todo espacao disponivel do container flexivel (a propriedade e uma abreviacao das tres propriedades flexbox basicas = flex-grow, flex-shrink e flex-basis*/
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-direction: column;
+  text-align: right;
+  /*posicao de alinhamento do texto*/
+}
+
+.app__aboutus-content_knife {
+  margin: 2rem 4rem;
+  /*o primeiro valor define a margem superior e inferior do elemento, o segundo valor define a margem a esquerda e direita do elemento*/
+
+}
+
+.app__aboutus-content_knife {
+  height: 910px;
+}
+
+.app__aboutus-content_history {
+  flex: 1;
+  /*faz com que preencha todo espacao disponivel do container flexivel (a propriedade e uma abreviacao das tres propriedades flexbox basicas = flex-grow, flex-shrink e flex-basis*/
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  text-align: left;
+  /*posicao de alinhamento do texto*/
+}
+
+.app__aboutus-content_aboutus p,
+.app__aboutus-content_history p {
+  margin: 2rem 0;
+  color: var(--color-grey);
+}
+
+@media screen and (max-width: 2000px) {
+
+  .app__aboutus-content_knife {
+    height: 1110px;
+  }
+
+  .app__aboutus-content_aboutus p,
+  .app__aboutus-content_history p {
+    margin: 4rem 0;
+
+  }
+
+}
+
+@media screen and (max-width: 900px) {
+  .app__aboutus-content {
+    flex-direction: column;
+  }
+
+  .app__aboutus-content_knife {
+    margin: 4rem 0;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .app__aboutus-overlay img {
+    width: 80%;
+    height: 320px;
+  }
+}

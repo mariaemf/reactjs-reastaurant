@@ -6,7 +6,7 @@ import { images, data } from "../../constants";
 import "./SpecialMenu.css";
 
 const SpecialMenu = () => (
-  <div className=",app__specialMenu flex__center section__padding" id="menu">
+  <div className="app__specialMenu flex__center section__padding" id="menu">
     <div className="app__specialMenu-title">
       <SubHeading title="Menu That You Palatte" />
       <h1 className="headtext__cormorant">Today`s Special</h1>
@@ -17,7 +17,12 @@ const SpecialMenu = () => (
         <p className="app__specialMeni_menu_heading">Wine & Beer</p>
         <div className="app__specialMenu_menu_items">
           {data.wines.map((wine, index) => (
-            <p>{wine.title}</p>
+            <MenuItem
+              key={wine.title + index}
+              title={wine.price}
+              price={wine.price}
+              tags={wine.tags}
+            />
           ))}
         </div>
       </div>
@@ -28,8 +33,13 @@ const SpecialMenu = () => (
       <div className="app__specialMenu-menu_cocktails  flex__center">
         <p className="app__specialMeni_menu_heading">Wine & Beer</p>
         <div className="app__specialMenu_menu_items">
-          {data.cocktails.map((cocktails, index) => (
-            <p>{cocktails.title}</p>
+          {data.cocktails.map((cocktail, index) => (
+            <MenuItem
+              key={cocktail.title + index}
+              title={cocktail.price}
+              price={cocktail.price}
+              tags={cocktail.tags}
+            />
           ))}
         </div>
       </div>

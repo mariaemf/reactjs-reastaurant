@@ -1,0 +1,24 @@
+.app__specialMenu {
+  flex-direction: column;
+  /*usada para definir a direcao do fluxo do conteudo em um container flexivel uando essa propriedade é aplicada a um elemento pai (ou contêiner), ele define que os filhos do contêiner devem ser dispostos verticalmente, ou seja, em uma coluna, de cima para baixo.*/
+  background: var(--color-black);
+}
+
+.app__specialMenu-title {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.app__specialMenu-menu {
+  width: 100%;
+  /*para ocupar todo conteúdo do container*/
+  margin: 2rem 0;
+  /*definindo a margem superior e inferior do elemento => 2rem = margem superior = 0 => margem inferior*/
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
+  /*, os itens flexíveis são organizados horizontalmente em uma linha, da esquerda para a direita*/
+
+}

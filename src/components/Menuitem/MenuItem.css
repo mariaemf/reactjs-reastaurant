@@ -32,18 +32,13 @@
   /*tam do elemento*/
   height: 1px;
   /*define a altura do elemento*/
-  left: 224px;
-  /* elemento será posicionado 224 pixels à direita do lado esquerdo do seu elemento pai.*/
-  top: 14.5px;
-  /*o elemento será posicionado 14.5 pixels abaixo do topo do seu elemento pai.*/
-
   background: #fafafa;
-  flex: none;
-  /*flex none e aplicado dentro do item com containe rflexivel para o item nao se ajustar automaticamente para preencher o espaço restante do container, isso significa que o item pode manter seu tamanho ORIGINAL mesmo se houver espaço extra disponivel*/
-  order: 1;
-  /*aplicado dentro de um item com container flexivel ele define que esse item deve ser exibido  após os itens com "order" menores.*/
-  flex-grow: 0;
-  margin: 0px 32px;
+  margin: 0px 1rem;
+}
 
-
+.app__menuitem-price {
+  display: flex;
+  justify-content: flex-end;
+  /* alinhará os itens dentro do contêiner*/
+  align-items: flex-end;
 }

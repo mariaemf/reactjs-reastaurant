@@ -1,0 +1,34 @@
+.app__video {
+  height: 100vh;
+  /*se refere a altura do viewPORT -> (demonstra que quer q o elemento preecha todo espaço disponvel da tela)É utilizada para que a altura do elemento seja a igual a da janela do navegador*/
+  position: relative;
+  /*quando definimos o elemento como position relative podemos ajustar a posicao do mesmo com top, bottom, left e right*/
+}
+
+.app__video video {
+  width: 100%;
+  /*instruindo que o mesmo ocupe toda largura disponivel do container*/
+  height: 100%;
+  /*instruindo para ocupar toda a altura disponivel do container*/
+  object-fit: cover;
+  /*a imagem e redimensionada para preencher todo o espaco disponivel do container, mantendo a proporção original da imagem*/
+}
+
+.app__video-overlay {
+  position: absolute;
+  inset: 0;
+  /*abreviação das 4 propriedades de posicionamento*/
+  background: rgba(0, 0, 0, 0.65);
+}
+
+.app__video-overlay_circle {
+  width: 100px;
+  /*definindo a largura atraves dos pxs*/
+  height: 100px;
+  /*definido altura do px*/
+  border-radius: 50%;
+  /*arredondamento*/
+  border: 1px solid var(--color-golden);
+  cursor: pointer;
+  /*para demonstrar que é um botão*/
+}

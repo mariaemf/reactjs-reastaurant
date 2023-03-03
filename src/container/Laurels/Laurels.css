@@ -1,0 +1,45 @@
+.app__laurels_awards {
+  display: flex;
+  justify-content: flex-start;
+  /*para alinhar os itens flexiveis ao longo do eixo principao (horizontal por padrao)*/
+  align-items: center;
+
+  margin-top: 3rem;
+  /*distancia de margin do topo*/
+  flex-wrap: wrap;
+  /*define que os itens flexiveis devem ser dispostos em uma única linha*/
+}
+
+.app__laurels_awards-card {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  min-width: 230px;
+  /*para definir largura miníma do elemento => se a largura do elemento for menor do que o valor especificado a largura minima sera aplicada e o elemnto sera expandido par atender a largura min*/
+  margin: 1rem;
+}
+
+.app__laurels_awards-card img {
+  width: 50px;
+  height: 50px;
+}
+
+.app__laurels_awards-card_content {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+}
+
+@media screen and (min-width: 1900px) {
+  .app__laurels_awards-card {
+    min-width: 390px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .app__laurels_awards-card {
+    min-width: 100%;
+    margin: 1rem 0;
+  }
+}

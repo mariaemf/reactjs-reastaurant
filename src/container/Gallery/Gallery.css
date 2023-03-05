@@ -1,0 +1,7 @@
+.app__gallery {
+  display: flex;
+  flex-direction: row;
+  /*flex-direction demonstra a direção usada para definir o eixo em um container flexivel -> quando definido em row (linha em ingles) significa que o eixo principal e executado horizontalmente*/
+  background: var(--color-black);
+  padding: 4rem 0 4rem 6rem;
+}

@@ -5,3 +5,61 @@
   background: var(--color-black);
   padding: 4rem 0 4rem 6rem;
 }
+
+.app__gallery-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  /*! para alinhar os itens ao inicio no eixo transversal*/
+  flex-direction: column;
+  /*! usado para definir a direção do fluxo principal do elemento*/
+
+  min-width: 500px;
+  padding-right: 2rem;
+  /*! usado para definir o espaçamento interno => 1rem = 16px 2rem = 32px */
+}
+
+.app__gallery-content button {
+  margin-top: 1rem;
+  /*distancia de margin do topo*/
+}
+
+.app__gallery-images {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  /*! os elementos sao organizados em uma linha horizontal -> começando da esquerda para direita*/
+  max-width: 50%;
+  /*usado para definir a largura maxima de um elemtno -> nesse caso o elemtno podera ter uma largura menor q 50% mas nunca menor q esse valor, e util para controlar a largura maxima de um elemtno, evitando que se torne muito grande em dispositivos em telas maiores*/
+  position: relative;
+  /*! usado para posicionar o elemento em relacao a sua posicao original na pagina, quando o elemento e definido como relative pode ser movido com top, bottom, left, right*/
+}
+
+.app__gallery-images_container {
+  display: flex;
+  flex-direction: row;
+  width: max-content;
+  /*usada para largura de um elemento baseado n o conteúdo maximo -> o mesmo tera 
+  largura necessária para acomodar todo seu conteúdo (incluindo margens, bordas e preenchimento) */
+  overflow-x: scroll;
+  /*para scrollar em eixo x*/
+  -ms-overflow-style: none;
+  /*usada para remover  abarra de rolagem padrao do elemento do browser*/
+  scrollbar-width: none;
+  /*usado para definir largura das barras de rolagem, no caso o none retira esse
+  comportamento*/
+
+}
+
+
+.app__gallery-images_container::-webkit-scrollbar {
+  display: none;
+}
+
+.app__gallery-images_card {
+  position: relative;
+  min-width: 301px;
+  height: 447px;
+  margin-right: 2rem;
+}

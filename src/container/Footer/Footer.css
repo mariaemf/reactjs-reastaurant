@@ -4,4 +4,11 @@
   z-index: 1;
 
   display: flex;
+  justify-content: flex-start;
+  /*alinha os itens ao inicio do container*/
+  align-items: center;
+  flex-direction: column;
+
+  background: var(--color-black);
+  padding-top: 0;
 }

@@ -5,7 +5,6 @@
 
   display: flex;
   justify-content: flex-start;
-  /*alinha os itens ao inicio do container*/
   align-items: center;
   flex-direction: column;
 

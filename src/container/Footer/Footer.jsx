@@ -21,17 +21,28 @@ const Footer = () => (
           <img src={images.gericht} alt="footer logo" />
           <p className="p__opensans">
             "The best way to find yourself is to lose yourself in the service of
-            others.”
-            <img
-              src={images.spoon}
-              alt="spoon"
-              className="spoon__images"
-              style={{ martginTop: 15 }}
-            />
+            others.”{" "}
           </p>
+          <img
+            src={images.spoon}
+            alt="spoon"
+            className="spoon__images"
+            style={{ martginTop: 15 }}
+          />
+          <div className="app__footer-links_icons">
+            <FiFacebook />
+            <FiInstagram />
+            <FiTwitter />
+          </div>
         </div>
 
-        <div className="app__footer-links_work"></div>
+        <div className="app__footer-links_work">
+          <h1 className="app__footer-headtext">Working Hours</h1>
+          <p className="p__opensans">Monday-Fryday:</p>
+          <p className="p__opensans">08:00 am 12:00am</p>
+          <p className="p__opensans">Saturday-Sunday:</p>
+          <p className="p__opensans">07:00 am 11:00am</p>
+        </div>
       </div>
       <div className="footer__copyright">
         <p className="p__opensans">2021 Gerícht. All Rights reserved.</p>
